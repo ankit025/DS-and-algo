@@ -1,9 +1,8 @@
-function reverseString(StringData) {
-    let Data = StringData;
-    Data = Data.split("");
-    Data = Data.reverse();
-    Data = Data.join("");
-    console.log(Data);
-    return Data;
+function reverseString1(StringData) {
+  let revesed = '';
+  for(let character of StringData){
+    revesed = character+revesed
   }
-  module.exports = reverseString;
+ return revesed
+}
+module.exports = reverseString1;
