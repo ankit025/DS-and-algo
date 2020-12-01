@@ -11,6 +11,7 @@ Steps
 
 var rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
+// M1
 function linearFunction(myArr, elementToFind) {
   for (let i = 0; i < myArr.length; i++) {
     if (myArr[i] == elementToFind) {
@@ -19,13 +20,26 @@ function linearFunction(myArr, elementToFind) {
   }
   return null;
 }
-
-let result = linearFunction(rainbow, "orange");
-console.log(result,"result");
-
+//M2
 function linearFunctionv2(myArr, elementToFind) {
   return myArr.indexOf(elementToFind);
 }
+//M3
+function linearFunctionv3(myArr, elementToFind) {
+  let counter = 0;
+  while (counter < myArr.length) {
+    if (myArr[counter] == elementToFind) {
+      return counter;
+    }
+    counter++;
+  }
+}
+
+let result = linearFunction(rainbow, "orange");
+console.log(result, "result");
 
 let result1 = linearFunctionv2(rainbow, "orange");
-console.log(result1,"result1");
+console.log(result1, "result1");
+
+let result2 = linearFunctionv3(rainbow, "orange");
+console.log(result2, "result2");
